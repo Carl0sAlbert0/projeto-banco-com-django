@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina inicial</title>
+</head>
+<body>
+
+{% if message %}
+<label>{{ message }}</label>
+{% endif %}
+
+<br clear="all"/>
+<center><font color="green" size="6">Banco One</font></center><br>
+<A HREF="http://127.0.0.1:8000/banco1/cadastro/">Cadastro</A><br>
+<A HREF="http://127.0.0.1:8000/banco1/transf/">Transferencia</A><br>
+<A href="http://127.0.0.1:8000/banco1/poupanca/">Poupança</A><br>
+<A HREF="http://127.0.0.1:8000/banco1/depositar/">Depositar</A><br>
+<A HREF="http://127.0.0.1:8000/banco1/sacar/">Sacar</A><br>
+<A HREF="http://127.0.0.1:8000/banco1/resgatar/">Resgatar</A><br>
+<A HREF="http://127.0.0.1:8000/banco1/pegardados/">Saldo</A>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Saldo</title>
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+
+            <th>
+                Saldo
+            </th>
+
+            <th>
+                Poupança
+            </th>
+        </tr>
+    </thead>
+    <tbody >
+        {% if conta %}
+
+
+        <tr>
+
+            <th>
+                {{ conta.saldo }}
+            </th>
+
+            <th>
+                {{ conta.cofre }}
+            </th>
+        </tr>
+
+
+        {% endif %}
+    </tbody>
+</table>
+
+
+</body>
+</html>

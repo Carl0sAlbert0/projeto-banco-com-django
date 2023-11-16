@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listagem de Contas</title>
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Número da conta
+            </th>
+
+            <th>
+                Agência
+            </th>
+
+            <th>
+                Saldo
+            </th>
+
+            <th>
+                Poupança
+            </th>
+        </tr>
+    </thead>
+    <tbody >
+        {% if contas %}
+
+            {% for conta in contas %}
+
+        <tr>
+
+            <th>
+                {{ conta.numero }}
+            </th>
+
+            <th>
+                {{ conta.agencia }}
+            </th>
+
+            <th>
+                {{ conta.saldo }}
+            </th>
+
+            <th>
+                {{ conta.cofre }}
+            </th>
+        </tr>
+
+        {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+
+</body>
+</html>

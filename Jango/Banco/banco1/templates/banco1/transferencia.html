@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Transferencia</title>
+</head>
+<body>
+{% if message %}
+<label>{{ message }}</label>
+{% endif %}
+
+<form action="{% url 'transferencia' %}" method="post" id="transf-form">
+    {% csrf_token %}
+    <label for="id_numero_conta_origem" class="required">Número da Conta de Origem</label> <input type="text" name="conta_origem" required id="id_numero_conta_origem"><br>
+    <label for="id_numero_agencia_origem" class="required">Número da Agencia de Origem</label> <input type="text" name="agencia_origem" required id="id_numero_agencia_origem"><br>
+    <label for="id_numero_conta_destino" class="required">Número da Conta de Destino</label> <input type="text" name="conta_destino" required id="id_numero_conta_destino"><br>
+    <label for="id_numero_agencia_destino" class="required">Número da Agencia de Destino</label> <input type="text" name="agencia_destino" required id="id_numero_agencia_destino"><br>
+    <label for="id_numero_valor_transferencia" class="required">Valor a Ser Transferido</label> <input type="text" name="valor" required id="id_numero_valor_transferencia"><br>
+    <input type="submit" value="Transferir">
+</form>
+
+
+</body>
+</html>

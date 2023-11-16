@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dados</title>
+</head>
+<body>
+
+{% if message %}
+<label>{{ message }}</label>
+{% endif %}
+
+<form action="{% url 'pegardados' %}" method="post" id="pri-form">
+    {% csrf_token %}
+    <label for="id_numero_conta" class="required">Número da Conta</label> <input type="text" name="conta" required id="id_numero_conta"><br>
+    <label for="id_numero_agencia" class="required">Número da Agencia</label> <input type="text" name="agencia" required id="id_numero_agencia"><br>
+    <input type="submit" value="Enviar">
+</form>
+
+</body>
+</html>
